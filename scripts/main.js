@@ -41,3 +41,12 @@ $('a.smooth-scroll')
     }
   }
 });
+
+function calculate_age(dob = "1998, 12, 2)") { 
+  var diff_ms = Date.now() - dob.getTime();
+  var age_dt = new Date(diff_ms); 
+
+  document.getElementById("myage").innerHTML = Math.abs(age_dt.getUTCFullYear() - 1970);
+}
+
+calculate_age(new Date(1998, 12, 2));
